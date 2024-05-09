@@ -11,7 +11,7 @@ setuptools.setup(
     description="A small example package",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/liuqs111/DNA-SE/blob/main/package/DNA_SE/",
+    url="https://github.com/liuqs111/DNA-SE",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
