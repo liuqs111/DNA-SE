@@ -5,7 +5,7 @@ import torch.utils.data as Data
 import numpy as np
 import torch.nn.functional as F     
 
-def dnase(p, Oi, BATCHSIZE, EPOCH, M, B, input_dim, hidden_dim, output_dim, K_func, C, psi_func, depth, activation = 'tanh', device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+def dnase(p, Oi, BATCHSIZE, EPOCH, M, B, input_dim, hidden_dim, output_dim, K_func, C, psi_func, depth, activation = 'relu', device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
     
     '''
     p: int, the number of features X
