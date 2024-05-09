@@ -91,15 +91,4 @@ For our three examples, since their functions are so complex, therefore we give 
 ## Reference:
 Qinshuo Liu, Zixin Wang, Xi-An Li, Xinyao Ji, Lei Zhang, LL#, and Zhonghua Liu#. DNA-SE: Towards Deep Neural-Nets Assisted Semiparametric Estimation. (2024). International Conference on Machine Learning.
 ## Acknowledgement
-The authors would like to thank BaoLuo Sun for helpful dis-
-cussions. Lin Liu is supported by NSFC Grant No.12101397
-and No.12090024, Shanghai Science and Technology Com-
-mission Grant No.21ZR1431000 and No.21JC1402900, and
-Shanghai Municipal Science and Technology Major Project
-No.2021SHZDZX0102. Zixin Wang and Lei Zhang are also
-supported by Shanghai Science and Technology Commis-
-sion Grant No.21ZR1431000. Lin Liu is also affiliated with
-Shanghai Artificial Intelligence Laboratory and the Smart
-Justice Lab of Koguan Law School of SJTU. Zhonghua Liu
-is also affiliated with Columbia University Data Science
-Institute.
+The authors would like to thank BaoLuo Sun for helpful discussions. Lin Liu is supported by NSFC Grant No.12101397 and No.12090024, Shanghai Science and Technology Commission Grant No.21ZR1431000 and No.21JC1402900, and Shanghai Municipal Science and Technology Major Project No.2021SHZDZX0102. Zixin Wang and Lei Zhang are also supported by Shanghai Science and Technology Commission Grant No.21ZR1431000. Lin Liu is also affiliated with Shanghai Artificial Intelligence Laboratory and the Smart Justice Lab of Koguan Law School of SJTU. Zhonghua Liu is also affiliated with Columbia University Data Science Institute.
