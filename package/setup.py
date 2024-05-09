@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="DNA_SE", # Replace with your own username
-    version="0.0.3",
+    version="0.0.4",
     author="Qinshuo",
     author_email="u3008680@connect.hku.hk",
     description="A small example package",
