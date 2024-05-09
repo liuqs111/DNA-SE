@@ -5,7 +5,7 @@ import torch.utils.data as Data
 import numpy as np
 import torch.nn.functional as F     
 
-def dnase(p, Oi, BATCHSIZE, EPOCH, M, B, input_dim, hidden_dim, output_dim, K_func, C, psi_func, depth, activation = 'relu', device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+def dnase(p, Oi, BATCHSIZE, EPOCH, M, B, input_dim, hidden_dim, output_dim, K_func, C_func, psi_func, depth, activation = 'tanh', device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
     
     '''
     p: int, the number of features X
@@ -81,7 +81,7 @@ def dnase(p, Oi, BATCHSIZE, EPOCH, M, B, input_dim, hidden_dim, output_dim, K_fu
     beta.apply(weight_init)
     
     # data loader
-    o_train = torch.linspace(int(min(Oi)) - 0.5, int(max(Oi)) + 0.5, B).reshape(B, 1).to(device)
+    o_train = torch.hstack([torch.linspace(int(min(Oi)) - 0.5, int(max(Oi)) + 0.5, B).reshape(B, 1) for _ in range(p + 1)]).to(device) # o_train is a tensor of shape (B, p+1) and the first p-th is for Oi, the last is for t
     train_data = Data.TensorDataset(o_train, torch.zeros(B, 1).to(device))
     train_loader = Data.DataLoader(dataset=train_data, batch_size=BATCHSIZE, shuffle=True)
     
@@ -95,12 +95,12 @@ def dnase(p, Oi, BATCHSIZE, EPOCH, M, B, input_dim, hidden_dim, output_dim, K_fu
         for step, (t_train, _) in enumerate(train_loader):
             
             s = torch.linspace(min(Oi),max(Oi),M).reshape(M,1).to(device)
-            t = t_train
+            t = t_train[..., -1]  
 
             def loss_function_integral(s, t, Oi, beta, model_b):
                 
                 inter_left = torch.sum(K_func(s,t,Oi,beta)*model_b(s,Oi))
-                inter_right = C(t,Oi,beta) + model_b(t,Oi)
+                inter_right = C_func(t,Oi,beta) + model_b(t,Oi)
                 return torch.mean(torch.sum((inter_left - inter_right)**2))
             
             optimizer_b.zero_grad()
