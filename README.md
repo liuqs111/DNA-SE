@@ -33,7 +33,7 @@ Then you can use the function *dnase* in this package:
 ```
 from DNA_SE import dnase
 ```
-## Alternating Usage
+### Alternating Usage
 Also if you want to modify the code by yourself, you can choose to download the repository from this github:
 ```
 git clone https://github.com/liuqs111/DNA-SE.git
