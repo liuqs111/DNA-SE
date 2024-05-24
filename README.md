@@ -16,7 +16,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvi
 
 ## Figures and Networks
 
-For our method, we choose simple neural networks and prove it is useful to solve integral equations. And we suppose the bi-level algorithm which is shown in 
+For our method, we choose simple neural networks and prove it is useful to solve integral equations. And we suppose the bi-level algorithm which is shown in ![
 
 ## Usage
 
