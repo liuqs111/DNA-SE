@@ -1,1 +1,1 @@
-from .DNA_SE import dnase
+from .DNA_SE import dna
