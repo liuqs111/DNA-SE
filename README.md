@@ -27,11 +27,11 @@ Also in order to use our algorithm more easily, we give a simple package in pyth
 For the usage of this package, you should first install the package *DNA_SE* into your server. The command of this is:
 
 ```
-pip install DNA_SE
+pip install DNA_SE==0.1.2
 ```
-Then you can use the function *dnase* in this package:
+Then you can use the function *dna* in this package:
 ```
-from DNA_SE import dnase
+from DNA_SE import dna
 ```
 ### Alternating Usage
 Also if you want to modify the code by yourself, you can choose to download the repository from this github:
