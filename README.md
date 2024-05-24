@@ -44,7 +44,7 @@ cd DNA_SE/package/DNA_SE
 ```
 And you can use the function by running the command below in command line:
 ```
-from DNA_SE import dnase
+from DNA_SE import dna
 ```
 ## Function Usage
 ```
