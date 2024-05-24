@@ -48,7 +48,7 @@ from DNA_SE import dna
 ```
 ## Function Usage
 ```
-dnase(p, Oi, BATCHSIZE, EPOCH, M, B, input_dim, hidden_dim, output_dim, K_func, C_func, depth, psi_func=None, esti_mask = False, activation = 'tanh', device = torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+dna(p, Oi, BATCHSIZE, EPOCH, M, B, input_dim, hidden_dim, output_dim, K_func, C_func, depth, psi_func=None, esti_mask = False, activation = 'tanh', device = torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
 ```
 `p`: int, the number of features X;
 
